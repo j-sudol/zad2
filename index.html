@@ -4,9 +4,8 @@
 <body>
   <h1>Fantasy Premier League Stats</h1>
   <div id="data"></div>
-
   <script>
-    fetch('data.json')
+    fetch('top_players.json')
       .then(res => res.json())
       .then(data => {
         document.getElementById('data').innerHTML = data.map(player =>
