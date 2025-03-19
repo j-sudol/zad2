@@ -2,16 +2,69 @@
 <html lang="en">
 <head><meta charset="UTF-8"><title>FPL Stats</title></head>
 <body>
-  <h1>Fantasy Premier League Stats</h1>
-  <div id="data"></div>
+  <header>
+    <img src = "logo.png" alt="FPL Logo" width="100" height="100">
+    <h1> Fantasy Premier League</h1>
+  </header>
+  <h2>Fantasy Premier League Stats</h2>
+  
+  <table id="data">
+    <caption>Top 10 players by Total Points</caption>
+    <thead>
+      <tr>
+        <th>Player</th>
+        <th>Total points</th>
+        <th>Position</th>
+        <th>Team</th>
+        <th>Price</th>
+        <th>Goals</th>
+        <th>Assists</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <h2>Player of the season - <strong>Mohamed Salah</strong></h2>
+  <img src = "salah1.jpg" width="360" height="200">
+  <img src = "salah2.jpg" width="360" height="200">
+
+  Mohamed Salah is an Egyptian professional footballer who was born on June 15, 1992, in Nagrig, Egypt. He plays as a forward for Liverpool FC in the English Premier League and the Egypt national team. Salah is known for his incredible speed, technical skills, and his ability to score goals from almost any position on the field. He started his professional career in Egypt with El Mokawloon before moving to Europe, where he played for clubs like FC Basel, Chelsea, Fiorentina, and AS Roma. His big breakthrough came after joining Liverpool in 2017.
+
+Since then, Salah has become one of the best players in the world and a fan favorite at Anfield. He broke the record for the most goals scored in a 38-game Premier League season during his first year at Liverpool. Salah is not only a great player but also a humble person who is loved by millions of fans around the world.
+
+  His most impmortant achievements are:
+  <ul>
+    <li> winning the <strong>Premier League</strong> title in the 2019-2020 season</li>
+    <li> winning the <strong>UEFA Champions League</strong> in the 2018-2019 season</li>
+    <li> winning the <strong>FIFA Club World Cup</strong> in 2019</li>
+    <li> winning the <strong>Premier League Golden Boot</strong> three times (2018, 2019, 2020)</li>
+    <li> being named <strong>African Footballer of the Year</strong> in 2017 and 2018</li>
+    <li> becoming <strong>Liverpool's all time top scorer in European competitions</strong></li>
+  </ul>
+  Off the pitch, Salah is also known for his charity work in Egypt, where he supports schools, hospitals, and helps improve living conditions in his hometown. He is seen as a role model for young players and continues to inspire millions of people both in Egypt and around the world.
+
+
   <script>
     fetch('top_players.json')
       .then(res => res.json())
       .then(data => {
-        document.getElementById('data').innerHTML = data.map(player =>
-          `<p>${player.name}: ${player.total_points} points</p>`
-        ).join('');
+        const tbody = document.querySelector('#data tbody');
+        data.forEach(osoba => {
+          const row = `<tr>
+            <td>${osoba.name}</td>
+            <td>${osoba.total_points}</td>
+            <td>${osoba.position}</td>
+            <td>${osoba.team}</td>
+            <td>${osoba.now_cost}</td>
+            <td>${osoba.goals_scored}</td>
+            <td>${osoba.assists}</td>
+          </tr>`;
+          tbody.innerHTML += row;
+        });
       });
   </script>
+
+  <footer>
+    <p>Created by: Jakub Sudoł</p>
 </body>
 </html>
