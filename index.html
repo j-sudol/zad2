@@ -1,38 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="UTF-8"><title>FPL Stats</title></head>
+<head>
+  <meta charset="UTF-8"><title>FPL</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 <body>
   <header>
-    <img src = "logo.png" alt="FPL Logo" width="100" height="100">
-    <h1> Fantasy Premier League</h1>
+    <div class="container">
+      <div>
+        <img src="logo.png" alt="Fpl Logo" width="100" height="100">
+      </div>
+      <div>
+        <h1> Fantasy Premier League</h1>
+      </div>
+    </div>
   </header>
-  <h2>Fantasy Premier League Stats</h2>
-  
+  <section class="wrapper">
+
+  <h3>Not sure what FPL is? <a href="https://en.wikipedia.org/wiki/Fantasy_Premier_League">Check it out here</a></h3>
+  <h3>Fantasy Premier League Stats</h3>
+
   <table id="data">
     <caption>Top 10 players by Total Points</caption>
     <thead>
       <tr>
-        <th>Player</th>
-        <th>Total points</th>
-        <th>Position</th>
-        <th>Team</th>
-        <th>Price</th>
-        <th>Goals</th>
-        <th>Assists</th>
+        <th scope="col">Player</th>
+        <th scope="col">Total points</th>
+        <th scope="col">Position</th>
+        <th scope="col">Team</th>
+        <th scope="col">Price</th>
+        <th scope="col">Goals</th>
+        <th scope="col">Assists</th>
       </tr>
     </thead>
     <tbody></tbody>
   </table>
+  </section>
+  <section class="wrapper">
+  <h3>Player of the season - <strong>Mohamed Salah</strong></h3>
+  <img src="salah1.jpg" alt="Salah photo1" width="360" height="200">
+  <img src="salah2.jpg" alt="Salah photo2" width="360" height="200">
 
-  <h2>Player of the season - <strong>Mohamed Salah</strong></h2>
-  <img src = "salah1.jpg" width="360" height="200">
-  <img src = "salah2.jpg" width="360" height="200">
-
-  Mohamed Salah is an Egyptian professional footballer who was born on June 15, 1992, in Nagrig, Egypt. He plays as a forward for Liverpool FC in the English Premier League and the Egypt national team. Salah is known for his incredible speed, technical skills, and his ability to score goals from almost any position on the field. He started his professional career in Egypt with El Mokawloon before moving to Europe, where he played for clubs like FC Basel, Chelsea, Fiorentina, and AS Roma. His big breakthrough came after joining Liverpool in 2017.
+  <p>Mohamed Salah is an Egyptian professional footballer who was born on June 15, 1992, in Nagrig, Egypt. He plays as a forward for Liverpool FC in the English Premier League and the Egypt national team. Salah is known for his incredible speed, technical skills, and his ability to score goals from almost any position on the field. He started his professional career in Egypt with El Mokawloon before moving to Europe, where he played for clubs like FC Basel, Chelsea, Fiorentina, and AS Roma. His big breakthrough came after joining Liverpool in 2017.
 
 Since then, Salah has become one of the best players in the world and a fan favorite at Anfield. He broke the record for the most goals scored in a 38-game Premier League season during his first year at Liverpool. Salah is not only a great player but also a humble person who is loved by millions of fans around the world.
 
-  His most impmortant achievements are:
+  His most important achievements are: </p>
   <ul>
     <li> winning the <strong>Premier League</strong> title in the 2019-2020 season</li>
     <li> winning the <strong>UEFA Champions League</strong> in the 2018-2019 season</li>
@@ -41,8 +54,14 @@ Since then, Salah has become one of the best players in the world and a fan favo
     <li> being named <strong>African Footballer of the Year</strong> in 2017 and 2018</li>
     <li> becoming <strong>Liverpool's all time top scorer in European competitions</strong></li>
   </ul>
-  Off the pitch, Salah is also known for his charity work in Egypt, where he supports schools, hospitals, and helps improve living conditions in his hometown. He is seen as a role model for young players and continues to inspire millions of people both in Egypt and around the world.
+  <p>
+    Off the pitch, Salah is also known for his charity work in Egypt, where he supports schools, hospitals, and helps improve living conditions in his hometown. He is seen as a role model for young players and continues to inspire millions of people both in Egypt and around the world.
+    <a href="https://en.wikipedia.org/wiki/Mohamed_Salah">Read more about Mohamed Salah</a>
+  </p>
 
+  <h3>Watch Mohamed Salah's best skills, goals and assists of the season</h3>
+
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/wwAtHUc0Pzk?si=b5WsIMKe0W7T6DD1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
   <script>
     fetch('top_players.json')
@@ -63,8 +82,9 @@ Since then, Salah has become one of the best players in the world and a fan favo
         });
       });
   </script>
-
+  </section>
   <footer>
     <p>Created by: Jakub Sudoł</p>
-</body>
+  </footer>
+  </body>
 </html>
