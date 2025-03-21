@@ -11,9 +11,6 @@ header {
   margin: auto;
   padding: 20px;
 }
-header .dark-mode:hover ~ body {
-  filter: invert(1);
-}
 
 .wrapper {
   padding-top: 20px;
