@@ -11,6 +11,9 @@ header {
   margin: auto;
   padding: 20px;
 }
+header .dark-mode:hover ~ body {
+  filter: invert(1);
+}
 
 .wrapper {
   padding-top: 20px;
@@ -66,11 +69,6 @@ h3 a:hover {
   color: rgb(57, 171, 209);
 }
 
-thead {
-  background-color: darkblue;
-  color: #fff;
-}
-
 tr:nth-child(even) {
   background-color: #f2f2f2;
 }
@@ -104,4 +102,14 @@ a:hover {
 
 a:visited {
   color: black;
+}
+
+.mobile-version {
+  display: block;
+}
+
+@media (max-width: 800px) {
+  .mobile-version {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */
