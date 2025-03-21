@@ -69,6 +69,11 @@ h3 a:hover {
   color: rgb(57, 171, 209);
 }
 
+thead {
+  background-color: darkblue;
+  color: #fff;
+}
+
 tr:nth-child(even) {
   background-color: #f2f2f2;
 }
