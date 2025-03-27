@@ -2,26 +2,30 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"><title>FPL</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./output.css">
+
 </head>
 <body>
-  <header>
+  <header class="bg-sky-200">
     <div class="container">
       <div>
         <img src="logo.png" alt="Fpl Logo" width="100" height="100">
       </div>
       <div>
-        <h1> Fantasy Premier League</h1>
+        <h1 class="text-3xl text-sky-700 font-bold"> Fantasy Premier League</h1>
       </div>
     </div>
   </header>
+  <div class="bg-sky-100 max-w-[1000px]">
   <section class="wrapper">
 
-  <h3>Not sure what FPL is? <a href="https://en.wikipedia.org/wiki/Fantasy_Premier_League">Check it out here</a></h3>
-  <h3>Fantasy Premier League Stats</h3>
-
-  <table id="data">
-    <caption>Top 10 players by Total Points</caption>
+  <h3 class="text-xl">Not sure what FPL is?</h3>
+  <div class="animate-pulse">
+    <h3 class="text-xl"><a href="https://en.wikipedia.org/wiki/Fantasy_Premier_League">Check it out here</a></h3>
+  </div>
+  <h3 class="text-xl font-bold">Fantasy Premier League Stats</h3>
+  <table class="shadow-md shadow-gray-700 table-auto" id="data">
+    <caption class="text-lg italic text-blue-800">Top 10 players by Total Points</caption>
     <thead>
       <tr>
         <th scope="col">Player</th>
@@ -37,10 +41,15 @@
   </table>
   </section>
   <section class="wrapper">
-  <h3>Player of the season - <strong>Mohamed Salah</strong></h3>
-  <img src="salah1.jpg" alt="Salah photo1" width="360" height="200">
-  <img src="salah2.jpg" alt="Salah photo2" width="360" height="200">
-
+  <h3 class="text-xl text-red-700">Player of the season - <strong>Mohamed Salah</strong></h3>
+  <div class="flex justify-center gap-10 w-9/10">
+    <div class="border-red-700 border-3">
+      <img src="salah1.jpg" alt="Salah photo1" width="360" height="200">
+    </div>
+    <div class="border-red-700 border-3">
+      <img src="salah2.jpg" alt="Salah photo2" width="360" height="200">
+    </div>
+  </div>
   <p>Mohamed Salah is an Egyptian professional footballer who was born on June 15, 1992, in Nagrig, Egypt. He plays as a forward for Liverpool FC in the English Premier League and the Egypt national team. Salah is known for his incredible speed, technical skills, and his ability to score goals from almost any position on the field. He started his professional career in Egypt with El Mokawloon before moving to Europe, where he played for clubs like FC Basel, Chelsea, Fiorentina, and AS Roma. His big breakthrough came after joining Liverpool in 2017.
 
 Since then, Salah has become one of the best players in the world and a fan favorite at Anfield. He broke the record for the most goals scored in a 38-game Premier League season during his first year at Liverpool. Salah is not only a great player but also a humble person who is loved by millions of fans around the world.
@@ -56,12 +65,12 @@ Since then, Salah has become one of the best players in the world and a fan favo
   </ul>
   <p>
     Off the pitch, Salah is also known for his charity work in Egypt, where he supports schools, hospitals, and helps improve living conditions in his hometown. He is seen as a role model for young players and continues to inspire millions of people both in Egypt and around the world.
-    <a href="https://en.wikipedia.org/wiki/Mohamed_Salah">Read more about Mohamed Salah</a>
+    <a class="text-sky-700" href="https://en.wikipedia.org/wiki/Mohamed_Salah">Read more about Mohamed Salah</a>
   </p>
 
-  <h3>Watch Mohamed Salah's best skills, goals and assists of the season</h3>
+  <h3 class="text-xl">Watch Mohamed Salah's best skills, goals and assists of the season</h3>
 
-  <div class="mobile-version">
+  <div class="flex justify-center">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/wwAtHUc0Pzk?si=b5WsIMKe0W7T6DD1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   </div>
   <script>
@@ -84,8 +93,9 @@ Since then, Salah has become one of the best players in the world and a fan favo
       });
   </script>
   </section>
-  <footer>
-    <p>Created by: Jakub Sudoł</p>
+  </div>
+  <footer class="bg-sky-200">
+    <p class="text-xl font-bold animate-ping">Created by: Jakub Sudoł</p>
   </footer>
   </body>
 </html>
