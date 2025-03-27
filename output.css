@@ -84,9 +84,9 @@ footer {
 a:hover {
   color: rgb(57, 171, 209);
 }
-a:visited {
+/* a:visited {
   color: black;
-}
+} */
 .mobile-version {
   display: block;
 }
